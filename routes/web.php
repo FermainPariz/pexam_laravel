@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/flight', function () {
-    return 'Hallo Welt';
+Route::get('/formular', function () {
+    return view('formular');
+});
+
+Route::post('/data', 'App\Http\Controllers\formularController@formular');
+
+Route::get('/data', function () {
+    return 'hallo';
 });
