@@ -8,8 +8,11 @@ class formularController extends Controller
 {
     public function formular(Request $request)
     {
-      $eingabe = $request->eingabe;
-      //compact übermittelt die eingabe mit
-      return view('ausgabe', compact("eingabe"));
+      $this->validate($request,
+      [
+        'username' => 'bail|required|min:3|max:35',
+        'email' => 'required|email|'
+      ]);
+      return 'Erfolg';
     }
 }

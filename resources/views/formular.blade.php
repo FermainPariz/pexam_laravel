@@ -5,10 +5,20 @@
     <title>Formular</title>
   </head>
   <body>
+
+    @if (count($errors) > 0)
+      <ul>
+        @foreach ($errors->all() as $e)
+        <li>{{ $e }}
+        @endforeach
+      </ul>
+    @endif
+
     <form method="POST" action="/data">
       {{ csrf_field() }}
-      <input type="text" name="eingabe">
-      <input type="submit" name="input" value="Abschicken!">
+      Name <input type="text" name="username"> <br> <br>
+      E-Mail <input type="email" name="email"> <br> <br>
+      <input type="submit" value="Registrieren!">
     </form>
   </body>
 </html>
