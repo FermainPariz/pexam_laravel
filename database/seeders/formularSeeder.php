@@ -13,8 +13,8 @@ class formularSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('formular')->delete();
-        \DB::table('formular')->insert(array(
+        \DB::table('formulars')->delete();
+        \DB::table('formulars')->insert(array(
           'username' => "Fermain",
           'email' => "fermainpariz@gmx.de"
         ));

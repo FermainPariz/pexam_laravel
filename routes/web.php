@@ -26,3 +26,11 @@ Route::post('/data', 'App\Http\Controllers\formularController@formular');
 Route::get('/data', function () {
     return 'hallo';
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -11,8 +11,9 @@ class formularController extends Controller
       $this->validate($request,
       [
         'username' => 'bail|required|min:3|max:35',
-        'email' => 'required|email|'
+        'email' => 'required|email'
       ]);
+      
       return 'Erfolg';
     }
 }
